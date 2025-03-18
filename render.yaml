@@ -1,1 +1,12 @@
+services:
+  - type: web
+    name: load-forecaster
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+    startCommand: |
+      python app.py
+    envVars:
+      - key: PORT
+        value: 5000
 
