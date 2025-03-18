@@ -9,7 +9,7 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.INFO)
 
 # Load dataset
-data = pd.read_csv('combined_2022_2024.csv')
+data = pd.read_csv('synthetic_data.csv')
 data['Date'] = pd.to_datetime(data['Date'])
 
 # Create a dictionary for installed capacity lookup
