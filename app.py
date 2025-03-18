@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.INFO)
 
 # Load dataset
 data = pd.read_csv('synthetic_data.csv')
-data['Date'] = pd.to_datetime(data['Date'])
+data['Date'] = pd.to_datetime(data['Date'], format='%Y-%m')
 
 # Create a dictionary for installed capacity lookup
 installed_capacity = data[['District', 'Installed Capacity (MW)']].drop_duplicates().set_index('District').to_dict()['Installed Capacity (MW)']
